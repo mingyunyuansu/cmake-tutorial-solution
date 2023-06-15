@@ -13,7 +13,11 @@ int main(int argc, char* argv[])
     std::cout << "Usage: " << argv[0] << " number" << std::endl;
     return 1;
   }
+  std::cout << "Version: " << Tutorial_VERSION_MAJOR << "." << Tutorial_VERSION_MINOR << std::endl;
 
+  #ifdef TEST_VAR
+  std::cout << "TEST_VAR set\n";
+  #endif
   // convert input to double
   // TODO 4: Replace atof(argv[1]) with std::stod(argv[1])
   const double inputValue = std::stof(argv[1]);
